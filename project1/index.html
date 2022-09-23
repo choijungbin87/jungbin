@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>siro</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
+    <script>
+        $(document).ready(function(e) {
+            $('#menu>li>a').on('click', function(e){
+                e.preventDefault();
+                $('html, body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+                return false;
+            });
+        });
+        
+        </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <img src="img/logo.png" alt="로고">
+            </div>
+            <nav>
+            <ul class="menu">
+                <li><a href="#box1">제품</a>
+                    <ul class="submenu">
+                        <li>그림스</li>
+                        <li>마블트리</li>
+                        <li>니엔후이스</li>
+                    </ul>
+                </li>
+                <li><a href="#box2">플레이</a>
+                    <ul class="submenu">
+                        <li>오스타이머</li>
+                        <li>제이맥</li>
+                        <li>앵커</li>
+                    </ul>
+                </li>
+                <li><a href="#box3">스토리</a>
+                    <ul class="submenu">
+                        <li>정토이즈소개</li>
+                        <li>발도르프란?</li>
+                        <li>가베란?</li>
+                    </ul>
+                </li>
+                <li><a href="#box4">발도르프</a>
+                    <ul class="submenu">
+                        <li>상품문의</li>
+                        <li>공지사항</li>
+                        <li>상품리뷰</li>
+                    </ul>
+                </li>
+                <!-- 초기화 -->
+            </ul>
+            <div class="top"><a href="#box1">▲</a></div>
+            </nav>
+            <section id="box1"></section>
+            <section id="box4"></section>
+            <section id="box5"></section>
+            <section id="box6"></section>
+        
+
+            <div class="search">
+                <img src="img/search.png" alt="검색">
+            </div>
+            <!-- 초기화 -->
+        </div>
+        <div id="mainimg">
+            <div class="left_btn">
+               <img src="img/arrow_left.png" alt="이전">
+            </div>
+            <div class="right_btn">
+                <img src="img/arrow_right.png">
+            </div>
+            <div class="inner">
+                <div class="text_box">
+                    <h1>발도르프 장인이 만든<br>
+                        그림스 네이처 세트</h1>
+                    <p>독일원목 교구<br>
+                        예술교육 네적 자유룰 만둘기 위함</p>
+                    <div class="btn">자세히 보기</div>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div class="box1">
+                <div class="box1_left">
+                    <div class="text_box">
+                        <h2>발도르프 그림스<br>
+                            네이처 22종 세트</h2>
+                        <p>자연물을 현상화한 놀이감 / 놀이터</p>
+                        <div class="btn">자세히 보기</div>
+                    </div>
+                </div>
+                <div class="box1_right"></div>
+                <!-- 초기화 -->
+            </div>
+
+            <div class="box2">
+                <div class="box2_left"></div>
+                <div class="box2_right">
+                    <div class="text_box">
+                        <h2>발도르프 그림스<br>
+                            스토리 26종 세트</h2>
+                        <p></p>
+                        <div class="btn">자세히 보기</div>
+                    </div>
+                </div>
+                <!-- 초기화 -->
+            </div>
+            <div class="box3">
+                <div class="inner">
+                    <h3>자연주의 발도르프 놀이</h3>
+                    <div class="box3_imgset">
+                        <div class="list">
+                            <div></div>
+                            <p>성</p>
+                        </div>
+                        <div class="list">
+                            <div></div>
+                            <p>무지개터널</p>
+                        </div>
+                        <div class="list">
+                            <div></div>
+                            <p>가족</p>
+                        </div>
+                        <!-- 초기화 -->
+                    </div>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="inner">
+                    <h3>플레이</h3>
+                    <div class="box4_imgset">
+                        <div class="list">
+                            <div></div>
+                            <p>야회활동/궁 전</p>
+                        </div>
+                        <div class="list">
+                            <div></div>
+                            <p>야외활동/공 원</p>
+                        </div>
+                        <div class="list">
+                            <div></div>
+                            <p>야외활동/숲속마을</p>
+                        </div>
+                        <!-- 초기화 -->
+                    </div>
+                </div>
+            </div>
+            <div class="box5">
+                <div class="left_btn">
+                    <img src="img/box5rrow_left.png" alt="이전">
+                </div>
+                <div class="right_btn">
+                    <img src="img/box5rrow_right.png" alt="다음">
+                </div>
+                <!--초기화 -->
+                <div class="inner">
+                    <h3>스토리</h3>
+                    <div class="box5_contentset">
+                        <div class="content_img">
+                            <div><div></div></div>
+                        </div>
+                        <div class="content_text">
+                            <h4>오스트리아 철학자 슈타이너</h4>
+                            <p>아이들은 자연을 담은 발도르프 교구가 필요하다.<br>
+                                상상력을 자극할수 있는 놀이감, 인위적으로 만들어진 장난감 보다는 실물을 닮은 놀잇감이 바람직 하다.</p>
+                            <div class="btn">자세히 보기</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box6">
+                <div class="box6_left"></div>
+                <div class="box6_right">
+                    <div class="text_box">
+                        <h1>그림스의가치<br>
+                            SFC.수작업.안전성</h1>
+                        <p>통나무를 손으로 다듬어 만든 단 하나뿐인 교구</p>
+                        <div class="btn">자세히 보기</div>
+                    </div>
+                    <!-- 초기화 -->
+                </div>
+            </div>
+            <div class="box7">
+                <div class="inner">
+                    <ul class="sns">
+                        <li class="list">
+                            <img src="img/box7_1img.jpg">
+
+                        </li>
+                        <li class="list">
+                            <img src="img/box7_2img.jpg">
+
+                        </li>
+                        <li class="list">
+                            <img src="img/box7_3img.jpg">
+
+                        </li>
+                        <li class="list">
+                            <img src="img/box7_4img.jpg">
+
+                        </li>
+                        <!-- 초기화 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner">
+            <p>©2021 by sirisweethome. ALL RIGHT RESERVED</p>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

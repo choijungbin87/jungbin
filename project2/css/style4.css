@@ -1,0 +1,172 @@
+/* 공통 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+a { text-decoration:none; }
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+#heder {
+    width: 100%;
+    height: 110px;
+    position: relative;
+}
+
+.logo {
+    width: 193px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 5%;
+}
+
+.h_btn {
+    float: right;
+    line-height: 110px; margin-right: 5%;
+}
+
+.btn1,
+.btn2,
+.menu {
+    display: inline-block; 
+}
+
+.menu>a>img{vertical-align: middle; margin-left: 10px;}
+#header:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.btn1,
+.btn2 {
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #333333;
+    border: 1px solid #dddddd;
+    
+}
+.menu {display: inline-block; top: 0; right:5%; }
+.menu>a{width: 100%;height: 100%; display: block;}
+
+a.close{
+    background-color: #fff;
+    width: 50px; height: 50px;
+    position: absolute; right: 0; top: 0; color: #000;
+    line-height: 50px; text-align: center;
+}
+
+.left_gnbWrap{
+    height: 100%;
+    width: 200px;
+    position: fixed; right: -200px; top: 0;
+    background-color: #fff;
+    padding-top: 50px;
+    z-index: 999;
+    transition: all 0.3s;
+}
+.left_gnbWrap.on{
+    right:0;
+}
+.left_gnb>li{
+    width: 100%;
+}
+.left_gnb>li>a{
+    display: block; text-align: center; line-height: 50px;
+    width: 100%; height: 50px; background-color: slategrey;
+    color: black;
+}
+.left_gnb>li>a.on{
+    background-color: #dcdddf;
+}
+.left_gnb>li>ul{
+    display: none;
+}
+.left_gnb>li>ul>li>a{
+    display: block; text-align: center; line-height: 50px;
+    width: 100%; height: 50px; background-color: #e6bdae;
+    color: black;
+}
+/* 메인이미지 */
+#mainimg {
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/sub4_02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 콘텐츠 */
+
+
+#contents {
+width: 100%;
+height: 633px;
+background-color: #fff;
+text-align: center;
+}
+
+#contents h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+#contents p {
+    text-align: center;
+    padding: 30px;
+
+}
+
+#contents .btn{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    border-radius: 30px;
+    
+}
+
+#contents .box {
+    padding-top: 50px;
+}
+
+#contents .img {
+    width: 321px;
+    height: 92px;
+    background-image: url(../img/sub4_03.jpg);
+    margin: 0 auto;
+}
+
+
+/* 푸터 */
+#footer{
+    width: 100%;
+    height: 236px;
+    background-color: #707070;
+    padding-top: 130px;
+}
+
+.footer_logo{
+    float: right;
+}
+
+#footer p {
+    float: left;
+    color: #989898;
+}
+

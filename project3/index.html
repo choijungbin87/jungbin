@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평생교육원</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    mobile_menu();
+});
+
+function mobile_menu(){
+    /* 변수 선언 */
+    var $menu = null;
+    var $left_gnb = null; // 영역 전체
+    var $depth1_wrap = null;
+    var $depth1 = null;
+    var $depth1_btn = null;
+    
+    /* 시작 함수 */
+    function start(){
+        init();
+        init_event();
+    }
+    /* 변수 초기화 함수 */
+    function init(){
+        $menu = $('.menu');
+        $left_gnb = $('.left_gnbWrap'); // 영역 전체
+        $depth1_wrap = $('.left_gnb>li');
+        $depth1 = $depth1_wrap.children('ul');
+        $depth1_btn = $depth1_wrap.children('a');
+    }
+    /* 이벤트 함수 */
+    function init_event(){
+        
+        /* 모바일 메뉴 버튼 클릭했을때 모바일 메뉴영역 나오게 하기 */
+        $menu.click(function(event){
+            event.preventDefault();
+            $left_gnb.addClass('on');
+        });
+        
+        /* x버튼 눌렀을때 모바일 메뉴 닫기 */
+        $('.close').click(function(event){
+            event.preventDefault();
+
+            $left_gnb.removeClass('on');
+            
+            // x버튼 누르면 시간차 약간두고 소메뉴 닫히게 하기
+            setTimeout(function(){
+                $depth1_btn.removeClass('on');
+                $depth1.slideUp();
+            },300)
+        });
+        
+        /* depth1의 각메뉴 클릭시 depth2 나오게 하기 */
+        $depth1_btn.click(function(event){
+            event.preventDefault();
+            var $this = $(this);
+            var $this_ul = $this.siblings('ul');
+
+            var check = $this.hasClass('on');
+            if(check){
+                $this.removeClass('on');
+                $this_ul.stop(true,true).slideUp();
+            }else{
+                $depth1_btn.removeClass('on');
+                $depth1.stop().slideUp();
+                $this.addClass('on');
+                $this_ul.stop(true,true).slideDown();
+            }
+        });
+        
+        /* 디바이스 크기 변경시 모바일 메뉴영역 숨기기 */
+        $(window).resize(function(){
+            $left_gnb.removeClass('on');
+        });
+    }
+    
+    start(); // 시작 호출
+}
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.jpg" alt="로고"></a>
+            </div>
+            <div class="h_btn">
+                <div class="btn1">로그인</div>
+                <div class="btn2">회원가입</div>
+
+                <div class="menu">
+                    <a href="#">
+                        <img src="img/icon.png" alt="토굴">
+                    </a>
+                  </div>
+                  <nav class="left_gnbWrap">
+                              <a href="#" class="close">닫기</a>
+                              <ul class="left_gnb">
+                                  <li>
+                                      <a href="#">채움교육</a>
+                                      <ul>
+                                          <li><a href="sub4.html">회사소개</a></li>
+                                          <li><a href="sub4.html">교육시스템</a></li>
+                                          <li><a href="sub4.html">운영시스템</a></li>
+                                          <li><a href="sub4.html">사업주훈련안내</a></li>
+                                          <li><a href="sub4.html">훈련생안내사항</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="#">온라인교육</a>
+                                      <ul>
+                                          <li><a href="sub4.html">채움콘텐츠</a></li>
+                                          <li><a href="sub4.html">사업주훈련</a></li>
+                                          <li><a href="sub4.html">법정의무교육</a></li>
+                                          <li><a href="sub4.html">산업안전보건교육</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="#">정부지원교육</a>
+                                      <ul>
+                                          <li><a href="sub4.html">평생교육바우처</a></li>
+                                          <li><a href="sub4.html">내일배움카드</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="#">지원센터</a>
+                                      <ul>
+                                          <li><a href="sub4.html">원격지원</a></li>
+                                          <li><a href="sub4.html">경제하기</a></li>
+                                          <li><a href="sub4.html">교재정보</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                    <a href="#">커뮤니티</a>
+                                    <ul>
+                                        <li><a href="sub5.html">공지사항</a></li>
+                                        <li><a href="sub5.html">지주묻는질문</a></li>
+                                        <li><a href="sub5.html">1:1문의</a></li>
+                                        <li><a href="sub5.html">자료실</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">교육실</a>
+                                    <ul>
+                                        <li><a href="sub6.html">수강신청현황</a></li>
+                                        <li><a href="sub6.html">나의강의실</a></li>
+                                        <li><a href="sub6.html">교육생신청</a></li>
+                                    </ul>
+                                </li>
+                              </ul>
+                          </nav>
+            </div>
+        </div>
+        <div id="mainimg">
+        </div>
+        <div id="contents">
+            <div class="box1">
+                <div class="inner">
+                    <h1>대표자격증</h1>
+                    <div class="box1_set">
+                    <div class="box1_l">
+                        <img src="img/box1_1111.jpg" alt="러닝">
+                    </div>
+                    <div class="box1_c">
+                        <img src="img/con1_2.jpg" alt="우편">
+                    </div>
+                    <div class="box1_r">
+                        <img src="img/con1_3.jpg" alt="민간">
+                    </div>
+                </div>
+                    <!-- 초기화 -->
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="inner">
+                    <h1>스마트한 교육</h1>
+                    <div class="box2_l">
+                        <div class="box2_set">
+                        <div class="box2_t">
+                            <img src="img/con3_l_t.jpg" alt="기업교육">
+                        </div>
+                        <div class="box2_b">
+                            <img src="img/con2_r_b.jpg" alt="지격증">
+                        </div>
+                    </div>
+                </div>
+                    <div class="box2_r">
+                        <img src="img/con2_r_1.jpg" alt="소식">
+                    </div>
+                    <!-- 초기화 -->
+                </div>
+                <div class="box2_m_img">
+                    <img src="img/box2_m_img.jpg" alt="모바일">
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="inner">
+                    <div class="box3_l">
+                        <img src="img/con3_l.jpg" alt="교육상담">
+                    </div>
+                    <div class="box3_r">
+                        <img src="img/con3_r.jpg" alt="교육과정">
+                    </div>
+                    <!-- 초기화 -->
+                </div>
+                <div class="box3_btn">
+                    <div>top</div>
+                </div>
+                <!-- 초기화 -->
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="inner">
+            <div class="footer_logo">
+                <img src="img/footer_logo.jpg" alt="푸터로고">
+            </div>
+            <p>회사소개 ㅣ 개인정보취급방침 ㅣ 이메일주소무단수집거부 ㅣ 이용약관</p>
+            <p> 상호: 채움평생교욱원 ㅣ 사업자등록번호:610-97-24148 ㅣ 대표:권이숙 ㅣ주소:전라북도 전주시 완산구 홍상북로45-20,4층401호(효자동3가)<br>
+                TEL:063-291-7090 ㅣ FAX:061-291-7093 ㅣ copyllght(c)2014ongoelCenter all ritghts revserved.</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
